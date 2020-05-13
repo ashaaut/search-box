@@ -8,13 +8,14 @@ function App() {
     const updatename=(e)=>setname(e.target.value)
     return (
         <div className="container">
+            <h1>Hello {name}</h1>
             <input
                 type='text'
                 placeholder='Enter your name '
                 name='name'
                 onChange={updatename}>
             </input>
-            <h1>Hello {name}</h1>
+            
         </div>
     )
 }

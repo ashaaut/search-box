@@ -1,9 +1,9 @@
 import React from 'react'
 function DisplaySuggestions(props) {
-    let suggestions = props.suggestions;
+    const {suggestions,onSelectedText} = props;
     return (
         <div >
-            <ul>{suggestions.map(s => <li>{s}</li>)}</ul>
+            <ul>{suggestions.map((s,i) => <li key={i} onClick={()=>onSelectedText(s)}>{s}</li>)}</ul>
         </div>
     )
 }

@@ -9,6 +9,7 @@ export default class AutoComplete extends Component {
             suggestions: [],
             enteredText: ''
         }
+        this.onSelectedText=this.onSelectedText.bind(this)
     }
 
     onEnteredTextChange(e) {
@@ -23,12 +24,20 @@ export default class AutoComplete extends Component {
         }))
     }
 
+    onSelectedText(text) {
+        this.setState(() => ({
+            suggestions: [],
+            enteredText: text,
+            
+        }))
+    }
+
 
     render() {
         return (
             <div className="container">
-                <input type="text" onChange={(e) => this.onEnteredTextChange(e)} placeholder="Enter the name" />
-                <DisplaySuggestions suggestions={this.state.suggestions} />
+                <input type="text" value={this.state.enteredText}onChange={(e) => this.onEnteredTextChange(e)} placeholder="Enter the name" />
+                <DisplaySuggestions suggestions={this.state.suggestions} onSelectedText={this.onSelectedText} />
             </div>
         );
     }

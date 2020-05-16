@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import data from '../data/data'
 import DisplaySuggestions from './displaySuggestions'
+import AddResult from './addResults'
 export default class AutoComplete extends Component {
     constructor(props) {
         super(props)
@@ -9,6 +10,10 @@ export default class AutoComplete extends Component {
             enteredText: ''
         }
         this.onSelectedText = this.onSelectedText.bind(this)
+        this.handleClick=this.handleClick.bind(this)
+    }
+    handleClick(newResult){
+        data.push(newResult);
     }
     onEnteredTextChange(e) {
         const text = e.target.value;
@@ -34,6 +39,7 @@ export default class AutoComplete extends Component {
             <div className="search-box-container">
                 <input className={classNameForInput} type="text" value={this.state.enteredText} onChange={(e) => this.onEnteredTextChange(e)} placeholder="Enter the name" />
                 <DisplaySuggestions suggestions={this.state.suggestions} onSelectedText={this.onSelectedText} />
+                <AddResult handleClick={this.handleClick}/>
             </div>
         );
     }

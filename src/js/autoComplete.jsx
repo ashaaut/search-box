@@ -37,7 +37,7 @@ export default class AutoComplete extends Component {
         let classNameForInput = this.state.suggestions.length > 0 ? 'input-div-if-suggestion input-div' : "input-div"
         return (
             <div className="search-box-container">
-                <input className={classNameForInput} type="text" value={this.state.enteredText} onChange={(e) => this.onEnteredTextChange(e)} placeholder="Enter the name" />
+                <input className={classNameForInput} type="text" name="focus"value={this.state.enteredText} onChange={(e) => this.onEnteredTextChange(e)} placeholder="Enter the name" />
                 <DisplaySuggestions suggestions={this.state.suggestions} onSelectedText={this.onSelectedText} />
                 <AddResult handleClick={this.handleClick}/>
             </div>

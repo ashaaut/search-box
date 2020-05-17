@@ -7,7 +7,7 @@ function AddResults(props) {
     }
     return (
         <div className="addResult-container">
-            <input className="newresultinput-div" type="text" onChange={(e) => addResult(e)} placeholder="Add new result" />
+            <input className="newresultinput-div" type="text"  onChange={(e) => addResult(e)} placeholder="Add new result" />
             <button onClick={() => handleClick(newresult)}>Add</button>
         </div>
     )

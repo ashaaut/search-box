@@ -66,20 +66,34 @@ body{
     padding-left: 5%;
     cursor: pointer;
     margin-top: 5px;
-    /* background-color: blueviolet; */
 }
-.search:hover{
+.search-result:hover{
     box-shadow: 1px 0px 1px 1px #e8e8f0; 
-    background-color: aqua;
+    border: 1px solid#e8e8f0;
+
 }
-.addResult-container{
+.add-result-container{
     padding-top: 20px;
     display: flex;
+    width: 100%;;
     flex-direction: row;
+
 }
-.newresultinput-div{
+.new-result-input-div{
     text-align: center;
+    width: 70%;
     height: 20px;
+    border: 1px solid ;
+    border-radius: 10px;
+    padding: 2%;
+    font-size: 20px;
+    outline: none;
+}
+.add-button{
+   margin-left: 5%;
+   width: 30%;
+   font-size: 20px;
+   border-radius: 10px;
 }
 .remove-icon {
     border:1px solid transparent;

@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
 function AddResults(props) {
-    const [newresult,setNewResult]=useState("")
-    const {handleClick}=props
-    const addResult=(e)=>{
+    const [newResult,setNewResult]=useState("")
+    const {handleClick}=props;
+    
+    const onValueChange=(e)=>{
         setNewResult(e.target.value)
     }
+    const addResult=()=>{
+        handleClick(newResult)
+        setNewResult("")
+    }
     return (
-        <div className="addResult-container">
-            <input className="newresultinput-div" type="text"  onChange={(e) => addResult(e)} placeholder="Add new result" />
-            <button onClick={() => handleClick(newresult)}>Add</button>
+        <div className="add-result-container">
+            <input className="new-result-input-div" type="text"  value={newResult} onChange={(e) => onValueChange(e)} placeholder="Type data to add" />
+            <button  className="add-button" onClick={() => addResult()}>Add</button>
         </div>
     )
 }

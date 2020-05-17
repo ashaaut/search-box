@@ -76,7 +76,6 @@ body{
     display: flex;
     width: 100%;;
     flex-direction: row;
-
 }
 .new-result-input-div{
     text-align: center;

@@ -7,7 +7,7 @@ import AutoComplete from './js/autoComplete'
 function App() {
     return (
         <div className="app-container">
-            <h1>Search-Box</h1>
+            <h1>SearchBox</h1>
             <AutoComplete/>
         </div>
     )

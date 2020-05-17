@@ -11,12 +11,11 @@ body{
 .app-container{
     width: 80%; 
     display: flex;
-    justify-content: center;
-
+    align-items: center;
+    flex-direction: column;
 }
 
 .search-box-container{
-    padding-top:10%;
     width: 60%;
     display: flex;
     align-items: center;

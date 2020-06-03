@@ -30,7 +30,7 @@ export default class AutoComplete extends Component {
         const text = e.target.value;
         let suggestions = [];
         if (text.length > 0) {
-            suggestions = data.sort().filter(s => s.toLowerCase().includes(text) == true)
+            suggestions = data.sort().filter(s => s.toLowerCase().includes(text.toLowerCase()) == true)
         }
         this.setState(() => ({
             suggestions,
